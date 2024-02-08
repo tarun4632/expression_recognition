@@ -6,7 +6,7 @@ from matplotlib import pyplot
 from sklearn.model_selection import train_test_split
 
 
-df = pd.read_csv(r'C:\Users\shuddhabrota\OneDrive\Desktop\Facial_Recog\fer2013.csv')
+df = pd.read_csv(r'path/to/the/dataset')
 
 #dictionary of labels and which expression they depict
 labels_of_test = {0:"Anger", 1:"Disgust", 2:"Fear", 3:"Happiness", 4:"Sadness", 5:"Surprise", 6:"Neutral"}
@@ -76,12 +76,12 @@ recog_model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 0.0001)
 
 # saving the model
 try:
-    os.mkdir(r'C:\Users\shuddhabrota\OneDrive\Desktop\Facial_Recog\checkpoint')
+    os.mkdir(r'path/of/location/you/want/your/directory')
 except:
     pass
 
 file_name = 'best_model.h5'
-checkpoint_path = os.path.join(r'C:\Users\shuddhabrota\OneDrive\Desktop\Facial_Recog\checkpoint', file_name)
+checkpoint_path = os.path.join(r'path/of/location/you/want/your/directory', file_name)
 
 call_back = tf.keras.callbacks.ModelCheckpoint(filepath = checkpoint_path,
                                                monitor = 'val_accuracy',
@@ -97,7 +97,7 @@ recog_model.fit(X_train,y_train,epochs = 20, validation_split = 0.2, callbacks =
 
 #Showing the predictions
 
-final_model = tf.keras.models.load_model(r'C:\Users\shuddhabrota\OneDrive\Desktop\Facial_Recog\checkpoint\best_model.h5')
+final_model = tf.keras.models.load_model(r'path/to/your/model')
 from IPython.display import clear_output
 correct = 0
 check = 0
