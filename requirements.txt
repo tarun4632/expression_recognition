@@ -1,0 +1,8 @@
+tensorflow
+pandas
+numpy
+os
+matplotlib
+scikit-learn
+pillow
+tarfile
