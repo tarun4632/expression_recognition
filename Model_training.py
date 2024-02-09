@@ -64,7 +64,7 @@ recog_model = tf.keras.models.Sequential([
 #print(recog_model.summary())
 
 # model compilation
-recog_model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 0.0001),
+recog_model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 0.0003),
                     loss = 'sparse_categorical_crossentropy',
                     metrics = ['accuracy'])
 
