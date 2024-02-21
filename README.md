@@ -5,6 +5,13 @@ This project focuses on the development and implementation of an expression reco
 
 ## Getting Started
 
+### download the dataset 
+
+download the dataset to train the model on ... through the following link 
+
+https://www.kaggle.com/datasets/msambare/fer2013
+
+
 ### Cloning the Project
 To clone this project onto your local computer, ensure you have git installed and then run the following command in your terminal or command prompt:
 
